@@ -17,6 +17,6 @@ trait ControllerTrait
      */
     private function getDirectory(string $directory = 'yaml'): string
     {
-        return $this->getParameter('folders')[$directory];
+        return realpath($this->getParameter('folders')[$directory]);
     }
 }
