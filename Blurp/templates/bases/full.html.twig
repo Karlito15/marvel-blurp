@@ -1,0 +1,34 @@
+{% extends '@Blurp/base.html.twig' %}
+
+{% block main %}
+
+{#{% include '@Blurp/partials/loader.html.twig' %}#}
+
+{% include '@Blurp/partials/theme.html.twig' %}
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div id="wrapper">
+    {% block notification %}{% include '@Blurp/partials/alert.html.twig' %}{% endblock %}
+
+    {% block navbar %}{% include '@Blurp/partials/header.html.twig' %}{% endblock %}
+
+    {% block search %}{% include '@Blurp/partials/search.html.twig' %}{% endblock %}
+
+    {% block megamenu %}{% include '@Blurp/partials/mega-menu.html.twig' %}{% endblock %}
+
+    {% block rightbar %}{% include '@Blurp/partials/right-sidebar.html.twig' %}{% endblock %}
+
+    {% block leftbar %}{% include '@Blurp/partials/left-sidebar.html.twig' %}{% endblock %}
+
+    <div id="main-content">
+        <div class="{% block container %}{{ container|default('container-fluid') }}{% endblock %}">
+            {% include '@Blurp/partials/breadcrumb.html.twig' %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

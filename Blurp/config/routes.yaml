@@ -1,0 +1,3 @@
+karlitoweb_users.routes:
+    type: attribute
+    resource: '../src/Controller'
