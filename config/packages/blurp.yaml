@@ -1,0 +1,12 @@
+# Le nom acme_hello doit être le même que le root de ta classe Configuration.
+blurp:
+    name:       'Blurp'
+    color:      'C8201B'
+    images:
+        avatar: 'images/sako-01.jpg'
+    metas:
+        title:              'Blurp Bundle'
+        author:             'Giancarlo PALUMBO'
+        email:              'giancarlo.palumbo@free.fr'
+        description:        "Template for Marvel's Website by Symfony 7.4.X"
+        generator:          'PHPStorm'

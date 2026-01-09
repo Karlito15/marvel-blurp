@@ -1,0 +1,16 @@
+{% extends '@Blurp/base.html.twig' %}
+
+{% block main %}
+
+<div id="wrapper">
+    {% block notification %}{% include '@Blurp/partials/alert.html.twig' %}{% endblock %}
+
+    <div id="main-content">
+        <div class="{% block container %}{{ container|default('container-fluid') }}{% endblock %}">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
