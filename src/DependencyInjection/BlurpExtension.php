@@ -36,7 +36,8 @@ class BlurpExtension extends Extension
         // Exposer en paramètres si besoin
         $container->setParameter('blurp.name', $config['name']);
         $container->setParameter('blurp.color', $config['color']);
-        $container->setParameter('blurp.images', $config['images']);
         $container->setParameter('blurp.metas', $config['metas']);
+        $container->setParameter('blurp.images', $config['images']);
+        $container->setParameter('blurp.folders', $config['folders']);
     }
 }

@@ -2,11 +2,18 @@
 blurp:
     name:       'Blurp'
     color:      'C8201B'
-    images:
-        avatar: 'images/sako-01.jpg'
     metas:
         title:              'Blurp Bundle'
         author:             'Giancarlo PALUMBO'
         email:              'giancarlo.palumbo@free.fr'
         description:        "Template for Marvel's Website by Symfony 7.4.X"
         generator:          'PHPStorm'
+    images:
+        avatar: 'images/sako-01.jpg'
+    folders:
+        csv:                '%kernel.project_dir%/../documents/csv/'
+        json:               '%kernel.project_dir%/../documents/json/'
+        markdown:           '%kernel.project_dir%/../documents/markdown/'
+        sql:                '%kernel.project_dir%/../documents/sql/'
+        txt:                '%kernel.project_dir%/../documents/txt/'
+        yaml:               '%kernel.project_dir%/../documents/yaml/'

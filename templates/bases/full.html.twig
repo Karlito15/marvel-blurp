@@ -18,9 +18,9 @@
 
     {% block megamenu %}{% include '@Blurp/partials/mega-menu.html.twig' %}{% endblock %}
 
-    {% block rightbar %}{% include '@Blurp/partials/right-sidebar.html.twig' %}{% endblock %}
+    {% block rightbar %}{% include '@Blurp/partials/sidebar-right.html.twig' %}{% endblock %}
 
-    {% block leftbar %}{% include '@Blurp/partials/left-sidebar.html.twig' %}{% endblock %}
+    {% block leftbar %}{% include '@Blurp/partials/sidebar-left.html.twig' %}{% endblock %}
 
     <div id="main-content">
         <div class="{% block container %}{{ container|default('container-fluid') }}{% endblock %}">

@@ -12,21 +12,16 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-	public function getConfigTreeBuilder(): TreeBuilder
-	{
+    public function getConfigTreeBuilder(): TreeBuilder
+    {
         // Le nom acme_hello doit être le même que le root de ta classe Configuration.
-		$treeBuilder = new TreeBuilder('blurp');
+        $treeBuilder = new TreeBuilder('blurp');
 
         $node = $treeBuilder->getRootNode();
         $node
             ->children()
                 ->stringNode('name')->isRequired()->cannotBeEmpty()->end()
                 ->stringNode('color')->defaultNull()->end()
-                ->arrayNode('images')
-                    ->children()
-                        ->stringNode('avatar')->end()
-                    ->end()
-                ->end()
                 ->arrayNode('metas')
                     ->children()
                         ->stringNode('title')->end()
@@ -36,9 +31,24 @@ class Configuration implements ConfigurationInterface
                         ->stringNode('generator')->end()
                     ->end()
                 ->end()
+                ->arrayNode('images')
+                    ->children()
+                        ->stringNode('avatar')->end()
+                    ->end()
+                ->end()
+                ->arrayNode('folders')
+                    ->children()
+                        ->stringNode('csv')->end()
+                        ->stringNode('json')->end()
+                        ->stringNode('markdown')->end()
+                        ->stringNode('sql')->end()
+                        ->stringNode('txt')->end()
+                        ->stringNode('yaml')->end()
+                    ->end()
+                ->end()
             ->end()
         ;
 
-		return $treeBuilder;
-	}
+        return $treeBuilder;
+    }
 }

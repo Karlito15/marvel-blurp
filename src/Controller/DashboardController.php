@@ -32,7 +32,7 @@ final class DashboardController extends AbstractController
         return $this->render('@Blurp/dashboard/index.html.twig', [
             'controller_name' => 'Welcome to Blurp',
             'breadcrumb'      => [
-                'level1' => $this->translator->trans('text.homepage'),
+                'level1' => $this->getParameter('blurp.metas')['title'],
                 'level2' => $title
             ],
             'container'       => 'container-fluid',

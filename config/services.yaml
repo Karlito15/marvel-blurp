@@ -1,5 +1,5 @@
-imports:
-    - 'parameters.yaml'
+#imports:
+#    - 'parameters.yaml'
 #parameters:
 
 services:
